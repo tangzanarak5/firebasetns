@@ -31,10 +31,11 @@ export class AppComponent implements OnInit {
       var Firebase = require("nativescript-plugin-firebase-common").Firebase;
       
        var firebase = Firebase.createNew({
-         url: 'https://fir-appproject14.firebaseio.com'
-         // persist: false // turn off offline disk persistence 
+        //  url: 'https://fir-appproject14.firebaseio.com'
+        url: 'https://fir-appproject14.firebaseio.com/' 
+        // persist: false // turn off offline disk persistence 
        });
-       var categories = firebase.child("categories");
+       var categories = firebase.child("registerUsers");
        var otherPromise = firebase.on('value', function(dataSnapshot) {
         // code to handle new value.
         var x = dataSnapshot.val();
